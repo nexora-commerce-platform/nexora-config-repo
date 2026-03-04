@@ -1,0 +1,5 @@
+server:
+  port: 8050
+
+example:
+  property: Hello from Auth Config

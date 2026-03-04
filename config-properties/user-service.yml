@@ -1,0 +1,5 @@
+server:
+  port: 8053
+
+example:
+  property: Hello from User Config
