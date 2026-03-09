@@ -1,5 +1,29 @@
 server:
-  port: 8051
+  port: 8011
+spring:
+  cloud:
+    gateway:
+      discovery: # Enable Dynamic Discovery Routing 
+        locator:
+          enabled: true 
+          lower-case-service-id: true 
+      routes:
+        - id: user-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/api/users/**
 
-example:
-  property: Hello from Gateway Config
+        - id: product-service
+          uri: lb://PRODUCT-SERVICE
+          predicates:
+            - Path=/api/products/**
+
+        - id: auth-service
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/api/auth/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
