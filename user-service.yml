@@ -1,5 +1,7 @@
 server:
   port: 8053
 
-example:
-  property: Hello from User Config
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
