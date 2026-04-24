@@ -1,5 +1,7 @@
 server:
-  port: 8050
+  port: 8024
 
-example:
-  property: Hello from Auth Config
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
