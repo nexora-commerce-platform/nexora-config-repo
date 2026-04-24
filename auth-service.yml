@@ -5,3 +5,12 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+
+keycloak:
+  server-url: http://localhost:8010
+  realm: nexora 
+  client-id: nexora-gateway
+  client-secret: pC8NHRU1tEMxSi9sSz94ODjvlDlaRTnV
+  admin:
+    username: admin 
+    password: admin
